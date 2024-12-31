@@ -1,0 +1,29 @@
+type of hooks=> 
+most used hooks 
+            1. useState => 
+                useState lets you use local state within a function component. 
+                You pass the initial state to this function and it returns a variable with the 
+                current state value (not necessarily the initial state) and another function to update this value.
+
+                Syntax==> const [stateValue, updaterFn] = useState(initialStateValue);
+                for Example --> 
+                    const [age,setState]=useState(25)
+
+            work of setState => 1. Updates the state: setState() adds all changes to the component's state object. 
+                            2. Triggers re-render: setState() instructs React to re-render the component with the updated state. 
+                            3. Ensures proper handling: setState() ensures that React handles the change appropriately and updates the UI.
+
+            2. useEffect => The useEffect Hook allows you to perform side effects in your components.
+                            Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+                            useEffect accepts two arguments. The second argument is optional.
+
+                Syntax=>useEffect(<function>, <dependency>)
+                examples==> useEffect(()=>
+                {
+                    run any operations
+                },[])
+
+                in the function we can perform operations and second parameter is dependency it means 
+                inner function call when any change in that dependency but once initial will execute at first when go that page. 
+
+            3. useContext==>  
