@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/public/fonts/Roboto/Roboto-Black.ttf") format("truetype");
@@ -46,4 +56,8 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.todos {
+  background-color: rgba(0, 0, 0, 0.3);
 }
