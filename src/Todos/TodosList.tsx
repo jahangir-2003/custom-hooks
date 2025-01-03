@@ -41,7 +41,7 @@ const TodosList: React.FC<TodosListProps> = ({
                                 />
                                 {update?.id !== todo.id ? (<div className="flex flex-col">
                                     <span className={todo.done && 'line-through'}>{todo.text}</span>
-                                    <span className="flex flex-row items-center gap-2 text-slate-500"><IoAlarmOutline />{new Date(todo.id).toLocaleString().slice(9, 20)}</span>
+                                    <span className="flex flex-row items-center gap-2 text-slate-500"><IoAlarmOutline />{new Date(todo.id).toLocaleString().slice(9, 15)}</span>
                                 </div>
                                 ) : (
                                     <input className="focus:outline-none border-2 px-2 rounded-sm border-slate-300"

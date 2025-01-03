@@ -15,12 +15,12 @@ export const ProdcutProvider = ({ children }: { children: ReactNode }) => {
     };
 
     const deleteProduct = (id: number) => {
-        console.log(id);
+        setProduct(products.filter((item) => item.id !== id))
     };
 
     const updateProduct = (update: datatype) => {
         // console.log(update);
-        setProduct(products.map((item) => item.id === update.id ? { ...item, text: update.title.trim(), price: update.price } : item))
+        setProduct(products.map((item) => item.id === update.id ? { ...item, title: update.title, price: update.price } : item))
     };
     return (
         <ProdcutContext.Provider

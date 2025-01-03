@@ -28,7 +28,7 @@ const tasksReducer = (state: todos[], action: Action) => {
             return state.map((item) => item.id === action.task.id ? { ...item, text: action.task.text.trim() } : item)
         }
         case "deleted": {
-            return state.filter((item) => item.id != action.id)
+            return state.filter((item) => item.id !== action.id)
         }
     }
 };
@@ -71,9 +71,9 @@ const Todos = () => {
     }
 
 
-    let filtered;
+    let filtered: todos[];
     if (searchtext.trim().length > 0) {
-        filtered = tasks.filter((item) => item.text.toLowerCase().includes(searchtext.trim().toLowerCase()))
+        filtered = tasks.filter((item: todos) => item.text.toLowerCase().includes(searchtext.trim().toLowerCase()))
     }
     else {
         filtered = tasks
